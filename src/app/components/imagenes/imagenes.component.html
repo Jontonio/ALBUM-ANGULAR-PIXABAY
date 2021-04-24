@@ -1,0 +1,20 @@
+<div class="container-fluid mt-4 conten-images" >
+
+  <ngx-masonry>
+    <div ngxMasonryItem class="masonry-item" *ngFor="let imagen of pixaService.imagenes">
+    <div class="conten-img">
+      <img class="img-list" src="{{imagen.webformatURL}}" (click)="dataService.openViewImage(imagen)" alt="{{imagen.tags}}" >
+      <div class="conten-info">
+        <div class="tags">
+          <p class="item-info">{{imagen.tags}}</p>
+        </div>
+        <div class="info-photo">
+          <p class="item-info"><i class="fas fa-thumbs-up"></i> {{imagen.likes}}</p>
+          <p class="item-info"><i class="fas fa-heart"></i> {{imagen.comments}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </ngx-masonry>
+
+</div>

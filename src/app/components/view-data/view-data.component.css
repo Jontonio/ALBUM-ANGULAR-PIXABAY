@@ -1,0 +1,16 @@
+.img-modal{
+    width: 100%;
+    height: auto;
+}
+.conten-card{
+    height: 67px;
+}
+.example-header-image {
+    background-size: cover;
+}
+video{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,16 @@
+<div class="conten-search">
+    <div class="container">
+        <h1 class="text-center animate__animated animate__fadeInDown">
+                <p class="message">Stunning free stock photos for download</p>
+        </h1>
+        <p class="text-center subtitle animate__animated animate__fadeInDown">Over 1.9 million+ royalty free stock photos shared by our talented community.</p>
+        <div class="text-center conten-input">
+            <span class="input-img"><i class="fas fa-search icon-search"></i></span>
+            <input placeholder="Buscar imagenes, vectores o videos"
+                    #data
+                    (keyup.enter)="buscar(data.value)"
+                    class="input-search"
+                    type="text">
+        </div>
+    </div>
+</div>

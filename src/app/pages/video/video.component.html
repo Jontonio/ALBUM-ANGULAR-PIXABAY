@@ -1,0 +1,8 @@
+<app-slide></app-slide>
+<div class="container-fluid mt-4">
+    <div class="row text-center">
+        <div class="col-md-4" *ngFor="let video of pixaService.video">
+            <video src="{{video.videos.tiny.url}}" (click)="dataService.openViewVideo(video)"></video>
+        </div>
+    </div>
+</div>

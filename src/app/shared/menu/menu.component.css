@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+.button-nav{
+    outline: 0 !important;
+    background: none;
+    border: none;
+    font-size: 20px;
+}

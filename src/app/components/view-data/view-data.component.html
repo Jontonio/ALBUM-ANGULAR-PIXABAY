@@ -1,0 +1,22 @@
+<div [ngSwitch]="vista">
+    <div *ngSwitchCase="'video'">
+        <video [src]="dataVideo.videos.small.url" controls></video>
+    </div>
+    <div *ngSwitchCase="'imagen'">
+        <mat-card class="conten-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image" 
+                     [ngStyle]="
+                                {'background-image': 'url('+dataImage.userImageURL+')',
+                                 'background-size':'cover'}">
+                </div>
+                <mat-card-title>{{dataImage.user}}</mat-card-title>
+                <mat-card-subtitle>{{dataImage.tags}}</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+        <div>
+            <img class="img-modal" [src]="dataImage.webformatURL" alt="" srcset="">
+        </div> 
+    </div>
+    <div *ngSwitchDefault>output2</div>
+</div>

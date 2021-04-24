@@ -1,0 +1,10 @@
+<div class="container mt-4">
+    <div *ngIf="pixaService.cargando" class="text-center"> 
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+    <div *ngIf="!pixaService.cargando" class="text-center">
+        <button (click)="cargarMore()"
+                class="animate__animated animate__backInUp"
+                mat-raised-button color="primary">Más imagenes</button>
+    </div>
+</div>

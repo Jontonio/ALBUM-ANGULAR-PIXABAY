@@ -1,0 +1,13 @@
+<mat-card class="conten-card">
+    <mat-card-header>
+        <div mat-card-avatar class="header-image" 
+             [ngStyle]="
+                        {'background-image': 'url('+dataImage.userImageURL+')'}">
+        </div>
+        <mat-card-title class="username">{{dataImage.user}}</mat-card-title>
+        <mat-card-subtitle class="tags">{{dataImage.tags}}</mat-card-subtitle>
+    </mat-card-header>
+</mat-card>
+<div>
+    <img class="img-modal" [src]="dataImage.webformatURL" alt="" srcset="">
+</div> 

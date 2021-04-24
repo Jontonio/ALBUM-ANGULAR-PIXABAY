@@ -1,0 +1,30 @@
+<nav *ngIf="dataService.viewButton" class="navbar justify-content-between fixed-bottom">
+    <a class="navbar-brand"></a>
+    <button (click)="dataService.scrollInitial()"
+            class="btn btn-success my-2 my-sm-0"><i class="fas fa-arrow-up"></i></button>
+</nav>
+
+<div class="container-fluid footer">
+    <mat-divider></mat-divider>
+    <br>
+    <div class="row">
+        <H2 class="text-center"><b>Contacto</b></H2>
+        <div class="col-contact">
+            <a href="https://www.linkedin.com/in/joseantonio-rojas" target="_blank" class="redes mt-3"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+        <div class="col-contact">
+            <a href="https://www.instagram.com/jontonio19/" target="_blank" class="redes mt-3"><i class="fab fa-instagram"></i> Instragram</a>
+        </div>
+        <div class="col-contact">
+            <a href="https://github.com/Jontonio" target="_blank" class="redes mt-3"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <div class="col-contact">
+            <a href="https://www.facebook.com/profile.php?id=100006001098839" target="_blank" class="redes mt-3"><i class="fab fa-facebook-f"></i> Facebook</a>
+        </div>
+    </div>
+    <br>
+    <div class="text-center">        
+        Jontonio's ©  - {{anio}}
+    </div>
+    <br>
+</div>

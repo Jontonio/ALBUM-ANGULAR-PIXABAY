@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">Luky</a>
+    <button (click)="open = !open" class="navbar-toggler button-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <i *ngIf="!open" class="fas fa-bars"></i>
+      <i *ngIf="open" class="fas fa-times"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" 
+             [routerLink]="['imagen']" routerLinkActive="active" >Imágenes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" 
+             [routerLink]="['vector']" routerLinkActive="active">Vectores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" 
+             [routerLink]="['video']" routerLinkActive="active">videos</a>
+        </li>
+      </ul>
+      <span class="navbar-text"></span>
+    </div>
+  </div>
+</nav>

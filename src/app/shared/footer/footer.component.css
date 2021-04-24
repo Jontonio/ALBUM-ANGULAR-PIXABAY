@@ -1,0 +1,21 @@
+.col-contact{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+.row{
+    margin: 0 auto;
+    width: 60%;
+}
+.col-contact a{
+    font-size: 18px;
+    color: #000;
+}
+@media (max-width:760px){
+    .row{
+        width: 100%;
+    }
+    .col-contact a{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,19 @@
+.img-modal{
+    width: 100%;
+    height: auto;
+}
+.conten-card{
+    height: 67px;
+}
+.header-image{
+    background-size:cover;
+}
+
+@media (max-width:760px){
+    .username{
+        font-size: 15px;
+    }
+    .tags{
+        font-size: 10px;
+    }
+}
