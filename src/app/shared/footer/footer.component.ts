@@ -7,8 +7,9 @@ import { DataService } from '../../providers/data.service';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  anio = new Date().getFullYear();
-  constructor( public dataService: DataService) { }
 
+  anio = new Date().getFullYear();
+
+  constructor( public dataService: DataService) { }
 
 }

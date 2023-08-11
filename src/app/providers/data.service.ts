@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ViewVideoComponent } from '../components/view-video/view-video.component';
 import { Imagen } from '../models/imagen.models';
 import { Video } from '../models/video.models';
 import { ViewImageComponent } from '../components/view-image/view-image.component';
-
 
 @Injectable({
   providedIn: 'root'
@@ -14,16 +12,12 @@ export class DataService {
 
   viewButton: boolean = true;
 
-  constructor( public dialog: MatDialog, private snackBar: MatSnackBar ) { 
-    this.scrollInitial(); 
+  constructor( public dialog: MatDialog, private snackBar: MatSnackBar ) {
+    this.scrollInitial();
   }
 
   openViewImage(dataImage:Imagen) {
     this.dialog.open( ViewImageComponent , { data: dataImage, panelClass: 'custom-dialog-container' });
-  }
-
-  openViewVideo(datavideo:Video) {
-    this.dialog.open( ViewVideoComponent , { data: datavideo, panelClass: 'custom-dialog-container' });
   }
 
   message(mens:string){
@@ -33,8 +27,8 @@ export class DataService {
   }
 
   scrollInitial(){
-    window.scrollTo(0,0); 
+    window.scrollTo(0,0);
   }
-  
+
 
 }

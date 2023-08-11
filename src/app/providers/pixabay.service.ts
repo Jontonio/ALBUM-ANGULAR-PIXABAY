@@ -4,7 +4,6 @@ import { Imagen } from '../models/imagen.models';
 import { Data } from '../models/data.models';
 import { Params } from '../models/params.models';
 import { Video } from '../models/video.models';
-import { Observable } from 'rxjs';
 import { DataService } from './data.service';
 
 
@@ -41,12 +40,11 @@ export class PixabayService {
         if(this.imagenes.length==0){
           this.snackbar.message('Lo sentimos, no pudimos encontrar ninguna coincidencia')
         }
-      },(err)=>{ 
+      },(err)=>{
         this.cargando = false;
         this.snackbar.message(`ERROR: ${err.name}`);
-        console.log(err) 
+        console.log(err)
       })
-      
   }
 
   moreImages(){
@@ -54,29 +52,21 @@ export class PixabayService {
     this.cargando = true;
     this.parametros.page_plus();
 
-    this.http.get<Data>( this.URL,{ params: this.parametros.params }).subscribe(
-      (res)=>{
+    this.http.get<Data>( this.URL,{ params: this.parametros.params }).subscribe({
+      next: (res) =>{
         this.imagenesAux = res.hits;
         this.imagenes.push(...this.imagenesAux)
         setTimeout(() => this.cargando = false, 500);
         if(this.imagenes.length==0){
           this.snackbar.message('Lo sentimos, no pudimos encontrar ninguna coincidencia')
         }
-      },(err)=>{ 
+      },
+      error:(err)=>{
         this.cargando = false;
         this.snackbar.message(`ERROR: ${err.name}`);
-        console.log(err) 
-      }) 
-
-  }
-
-  getVideos(){
-    this.http.get<Data>('https://pixabay.com/api/videos/?key=18495173-29b6f4b8f08b75bad50a8f930&q=yellow+flowers&pretty=true').subscribe(
-      (res)=>{
-        this.video = res.hits
-        console.log(this.video)
-      },(err)=>{ console.log(err) }
-    )
+        console.log(err)
+      }
+    })
   }
 
 }

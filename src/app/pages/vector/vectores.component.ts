@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PixabayService } from '../../providers/pixabay.service';
 
 @Component({
@@ -6,14 +6,11 @@ import { PixabayService } from '../../providers/pixabay.service';
   templateUrl: './vectores.component.html',
   styleUrls: ['./vectores.component.css']
 })
-export class VectoresComponent implements OnInit {
+export class VectoresComponent {
 
   constructor( private pixaservice:PixabayService) {
     this.pixaservice.parametros.setImageType('vector');
     this.pixaservice.getImages();
-  }
-
-  ngOnInit(): void {
   }
 
 }

@@ -11,14 +11,12 @@ import { ImagenesComponent } from './components/imagenes/imagenes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VectoresComponent } from './pages/vector/vectores.component';
 import { ImagenComponent } from './pages/imagen/imagen.component';
-import { VideoComponent } from './pages/video/video.component';
 // Import NgMasonryGridModule
 import { NgxMasonryModule } from 'ngx-masonry';
 import { SlideComponent } from './components/slide/slide.component';
 import { MoreImagesComponent } from './components/more-images/more-images.component';
 import { ViewDataComponent } from './components/view-data/view-data.component';
 import { ViewImageComponent } from './components/view-image/view-image.component';
-import { ViewVideoComponent } from './components/view-video/view-video.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +26,10 @@ import { ViewVideoComponent } from './components/view-video/view-video.component
     ImagenesComponent,
     VectoresComponent,
     ImagenComponent,
-    VideoComponent,
     SlideComponent,
     MoreImagesComponent,
     ViewDataComponent,
     ViewImageComponent,
-    ViewVideoComponent
   ],
   imports: [
     BrowserModule,

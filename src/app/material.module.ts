@@ -11,31 +11,26 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+const materialModules:any = [
+  MatToolbarModule,
+  MatIconModule,
+  MatInputModule,
+  MatButtonModule,
+  MatDividerModule,
+  MatMenuModule,
+  MatDialogModule,
+  MatCardModule,
+  MatSnackBarModule
+]
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatInputModule,
-    MatButtonModule,
-    MatDividerModule,
-    MatMenuModule,
-    MatDialogModule,
-    MatCardModule,
-    MatSnackBarModule
+    ...materialModules
   ],
   exports: [
-    MatToolbarModule,
-    MatIconModule,
-    MatInputModule,
-    MatButtonModule,
-    MatDividerModule,
-    MatMenuModule,
-    MatDialogModule,
-    MatCardModule,
-    MatSnackBarModule
+    ...materialModules
   ]
 })
 export class MaterialModule { }

@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { 
-    height: 100%; 
+html, body {
+    height: 100%;
     background:#F4F4F4;
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -82,8 +82,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 /* style of scroll body */
 body::-webkit-scrollbar {
-    width: 8px;    
-    height: 8px;    
+    width: 8px;
+    height: 8px;
 }
 body::-webkit-scrollbar-thumb {
     background: #b3b3b3;

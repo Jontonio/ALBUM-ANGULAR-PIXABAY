@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PixabayService } from 'src/app/providers/pixabay.service';
 
 @Component({
@@ -6,11 +6,9 @@ import { PixabayService } from 'src/app/providers/pixabay.service';
   templateUrl: './more-images.component.html',
   styleUrls: ['./more-images.component.css']
 })
-export class MoreImagesComponent implements OnInit {
+export class MoreImagesComponent {
 
   constructor( public pixaService:PixabayService ) { }
-
-  ngOnInit(): void { }
 
   cargarMore(){ this.pixaService.moreImages(); }
 
